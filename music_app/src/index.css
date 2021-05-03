@@ -1,119 +1,136 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Fira Sans", sans-serif;
+  margin: 0%;
+  /* padding: 0%; */
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
 }
 
 body {
-    background-color: #DDD;
+  background: rgb(197, 237, 237);
+  background: radial-gradient(
+    circle,
+    rgba(197, 237, 237, 1) 0%,
+    rgba(25, 179, 196, 1) 100%
+  );
 }
 
 .App {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .c-player {
-    display: block;
-    background-color: #313131;
-    display: block;
-    margin: 0px auto;
-    padding: 50px;
-    border-radius: 16px;
-    box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.8), inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+  /* padding-top: 5%; */
+  margin-top: 10%;
+  display: block;
+  /* background-color: #5591b4; */
+  display: block;
+  /* height: 500px; */
+  width: 100%;
+  /* margin: 0px auto; */
+  padding: 50px;
+  /* border-radius: 16px; */
+  /* box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.8),
+    inset 6px 6px 12px rgba(158, 153, 153, 0.4); */
 }
 
 .c-player > h4 {
-    color: #FFF;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 500;
-    text-align: center;
+  color: rgb(49, 49, 48);
+  font-size: 30px;
+
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
 }
 
 .c-player > p {
-    color: #AAA;
-    font-size: 14px;
-    text-align: center;
-    font-weight: 600;
+  color: rgb(26, 23, 23);
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .c-player > p span {
-    font-weight: 400;
+  font-weight: 00;
 }
 
 .c-player--details .details-img {
-    position: relative;
-    width: fit-content;
-    margin: 0 auto;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .c-player--details .details-img img {
-    display: block;
-    margin: 50px auto;
-    width: 100%;
-    max-width: 250px;
-    border-radius: 50%;
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.4);
+  display: block;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8),
+    -6px -6px 12px rgba(255, 255, 255, 0.4);
 }
 
 .c-player--details .details-img:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: -25px;
-    left: -25px;
-    right: -25px;
-    bottom: -25px;
-    border-radius: 50%;
-    border: 3px dashed rgba(255, 206, 0, 1);
+  content: "";
+  display: block;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  right: -25px;
+  bottom: -25px;
+  border-radius: 50%;
+  border: 10px dashed rgb(158, 22, 129);
 }
 
 .c-player--details .details-title {
-    color: #EEE;
-    font-size: 28px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.4);
-    text-align: center;
-    margin-bottom: 10px;
+  color: #eee;
+  font-size: 28px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .c-player--details .details-artist {
-    color: #AAA;
-    font-size: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.4);
-    text-align: center;
-    margin-bottom: 20px;
+  color: rgb(19, 17, 17);
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .c-player--controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .c-player--controls .play-btn {
-    display: flex;
-    margin: 0 30px;
-    padding: 20px;
-    border-radius: 50%;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4), inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
-    border: none;
-    outline: none;
-    background-color: #FFCE00;
-    color: #FFF;
-    font-size: 24px;
-    cursor: pointer;
+  display: flex;
+  margin: 0 30px;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8),
+    -4px -4px 10px rgba(255, 255, 255, 0.4),
+    inset -4px -4px 10px rgba(0, 0, 0, 0.4),
+    inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+  border: none;
+  outline: none;
+  background-color: #ffce00;
+  color: rgb(19, 18, 18);
+  font-size: 40px;
+  cursor: pointer;
 }
 
 .c-player--controls .skip-btn {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color: #888;
-    font-size: 18px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: rgb(29, 26, 26);
+  font-size: 30px;
 }
