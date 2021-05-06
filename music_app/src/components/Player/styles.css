@@ -20,3 +20,11 @@
   color: #66ff33;
   text-align: center;
 }
+.logout-button {
+  position: fixed;
+  margin-left: 92.5%;
+}
+.login-button {
+  position: fixed;
+  margin-left: 87.5%;
+}

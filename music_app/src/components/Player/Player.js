@@ -1,16 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
 import Controls from "./Controls";
 import Details from "./Details";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Player(props) {
+  const { user, isAuthenticated } = useAuth0();
   const audioEl = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     if (isPlaying) {
       audioEl.current.play();
+      // console.log(audioEl);
     } else {
-      audioEl.current.pause();
+      // audioEl.current.stop();
+      // console.log(audioEl);
     }
   });
 
@@ -41,27 +45,28 @@ function Player(props) {
   };
 
   return (
-    <div className="c-player">
-      <audio
-        src={props.songs[props.currentSongIndex].src}
-        ref={audioEl}
-      ></audio>
-      <h4>Playing now</h4>
-      <Details song={props.songs[props.currentSongIndex]} />
-      <Controls
-        isPlaying={isPlaying}
-        setIsPlaying={setIsPlaying}
-        SkipSong={SkipSong}
-      />
-      <p>
-        Next up:{" "}
-        <span>
-          {props.songs[props.nextSongIndex].title} by{" "}
-          {props.songs[props.nextSongIndex].artist}
-        </span>
-      </p>
-    </div>
+    isAuthenticated && (
+      <div className="c-player">
+        <audio
+          src={props.songs[props.currentSongIndex].src}
+          ref={audioEl}
+        ></audio>
+        <h4>Playing now</h4>
+        <Details song={props.songs[props.currentSongIndex]} />
+        <Controls
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
+          SkipSong={SkipSong}
+        />
+        <p>
+          Next up:{" "}
+          <span>
+            {props.songs[props.nextSongIndex].title} by{" "}
+            {props.songs[props.nextSongIndex].artist}
+          </span>
+        </p>
+      </div>
+    )
   );
 }
-
 export default Player;

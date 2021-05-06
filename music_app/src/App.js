@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Player from "./components/Player/Player";
 import Navbarr from "./components/Player/Navbar";
 import Footer from "./components/Player/Footer";
+import LoginButton from "./components/Player/LoginButton";
+import LogoutButton from "./components/Player/LogoutButton";
 
 function App() {
   const [songs] = useState([
@@ -47,12 +49,14 @@ function App() {
   return (
     <div className="App">
       <Navbarr />
+
       <Player
         currentSongIndex={currentSongIndex}
         setCurrentSongIndex={setCurrentSongIndex}
         nextSongIndex={nextSongIndex}
         songs={songs}
       />
+
       <Footer />
     </div>
   );

@@ -2,6 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as ReactBootstrap from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
 import "./styles.css";
 const Navbarr = () => {
   return (
@@ -16,6 +18,8 @@ const Navbarr = () => {
             alt="React Bootstrap logo"
           />
         </Navbar.Brand>
+        <LoginButton />
+        <LogoutButton />
       </Navbar>
     </div>
   );
