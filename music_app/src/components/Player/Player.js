@@ -9,12 +9,12 @@ function Player(props) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
+    if (audioEl.current == null) return;
+
     if (isPlaying) {
       audioEl.current.play();
-      // console.log(audioEl);
     } else {
-      // audioEl.current.stop();
-      // console.log(audioEl);
+      audioEl.current.pause();
     }
   });
 

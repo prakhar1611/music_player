@@ -4,8 +4,11 @@ import Navbarr from "./components/Player/Navbar";
 import Footer from "./components/Player/Footer";
 import LoginButton from "./components/Player/LoginButton";
 import LogoutButton from "./components/Player/LogoutButton";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
+  const { isLoading } = useAuth0();
+
   const [songs] = useState([
     {
       title: "Old Town Road",
@@ -45,7 +48,7 @@ function App() {
       }
     });
   }, [currentSongIndex]);
-
+  if (isLoading) return <h3>Loading ...</h3>;
   return (
     <div className="App">
       <Navbarr />
